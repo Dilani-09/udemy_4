@@ -94,16 +94,22 @@ body{
     justify-content: space-around;
 }
 
+.categories p:hover{
+    background-color: transparent;
+    color: #aa3ebd;
+    transition: 1s;
+    border:1px solid #aa3ebd ;
+}
+
 .categories p{
     background-color: blueviolet;
     border-radius: 30px;
     padding: 10px;
     color: aliceblue;
+    cursor: pointer;
+    border:1px solid #aa3ebd ;
 }
 
-.categories p:hover{
-    opacity: 0.5;
-}
 /* sale image */
 
 .sale-image img{
@@ -122,7 +128,27 @@ body{
    top: 10%;
    left: 10%;
    padding: 2%;
+   animation-name: zoom;
+   animation-duration: 2s;
+   opacity: 0;
+   animation-fill-mode: forwards;
 
+}
+
+@keyframes zoom{
+    0%{
+  
+        transform: sacle(0);
+        opacity: 0;
+    }
+
+    100%{
+
+        transform: scale(1);
+        opacity: 1;
+        
+
+    }
 }
 
 .course-card{
